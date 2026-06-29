@@ -21,9 +21,10 @@ prompt = st.chat_input("Ask AnyThing")
 
 #display old messages
 
-for messages in st.session_state.messages:
-    with st.chat_messages(messages["role"]):
-        st.write(messages["content"])
+
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.write(message["content"])
 
 
 #save user messages 
